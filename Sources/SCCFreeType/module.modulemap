@@ -1,4 +1,4 @@
-module CFreeType [system] {
+module SCCFreeType [system] {
     header "shim.h"
     link "freetype"
     export *

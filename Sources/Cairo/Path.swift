@@ -6,7 +6,7 @@
 //  Copyright © 2016 PureSwift. All rights reserved.
 //
 
-import CCairo
+import SCCCairo
 
 public final class Path {
     
