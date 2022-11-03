@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         os: ['ubuntu-20.04', 'macos-12']
-        swift: ['5.6']
+        swift: ['5.7']
     
     runs-on: ${{ matrix.os }}
     steps:
@@ -21,7 +21,7 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y libcairo2-dev
     - name: Install system dependencies (macOS)
       if: runner.os == 'macOS'
-      run: brew install cairo
+      run: brew install cairo freetype2
     - name: Build
       run: swift build
     - name: Test
