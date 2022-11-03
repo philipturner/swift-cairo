@@ -13,6 +13,11 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
+      # Workaround for FFI modulemap redefinition error
+      # https://github.com/tauri-apps/tauri/issues/1150#issuecomment-768310979
+    - name: Remove native command-line-tools (macOS)
+      if: runner.os == 'macOS'
+      run: sudo rm -rf /Library/Developer/CommandLineTools
     - uses: fwal/setup-swift@v1
       with:
         swift-version: ${{ matrix.swift }}
