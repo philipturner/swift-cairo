@@ -1,6 +1,6 @@
 # Cairo
 
-[![Linux](https://github.com/fwcd/swift-cairo/workflows/Linux/badge.svg)](https://github.com/fwcd/swift-cairo/actions)
+[![Build](https://github.com/fwcd/swift-cairo/actions/workflows/build.yml/badge.svg)](https://github.com/fwcd/swift-cairo/actions/workflows/build.yml)
 
 Cairo library for Swift
 
