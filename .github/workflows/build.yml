@@ -18,7 +18,7 @@ jobs:
     - name: Remove native command-line-tools (macOS)
       if: runner.os == 'macOS'
       run: sudo rm -rf /Library/Developer/CommandLineTools
-    - uses: fwal/setup-swift@v1
+    - uses: swift-actions/setup-swift@v1
       with:
         swift-version: ${{ matrix.swift }}
     - name: Install system dependencies (Linux)
