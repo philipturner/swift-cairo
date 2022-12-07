@@ -41,7 +41,7 @@ let package = Package(
             ]),
         .systemLibrary(
             name: "SCCFreeType",
-            pkgConfig: "freetype",
+            pkgConfig: "freetype2",
             providers: [
                 .brew(["freetype2"]),
                 .apt(["libfreetype6-dev"])
