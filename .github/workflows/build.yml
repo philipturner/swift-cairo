@@ -27,7 +27,7 @@ jobs:
       # - https://github.com/tauri-apps/tauri/issues/1150#issuecomment-768310979
     - name: Remove duplicate FFI headers (macOS)
       if: runner.os == 'macOS'
-      run: sudo mv /Library/Developer/CommandLineTools/usr/include/ffi{,.backup}
+      run: sudo mv /Library/Developer/CommandLineTools/SDKs/MacOSX13.sdk/usr/include/ffi{,.backup}
     - name: Build
       run: swift build
     - name: Test
