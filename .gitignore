@@ -1,3 +1,4 @@
 Cairo.xcodeproj
 .build
+*.swp
 Packages
