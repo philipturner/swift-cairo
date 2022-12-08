@@ -12,13 +12,7 @@ jobs:
     
     runs-on: ${{ matrix.os }}
     steps:
-    - uses: actions/checkout@v2
-      # Workaround for FFI modulemap redefinition error, see
-      # - https://github.com/orgs/Homebrew/discussions/4025
-      # - https://github.com/tauri-apps/tauri/issues/1150#issuecomment-768310979
-    - name: Remove duplicate FFI headers (macOS)
-      if: runner.os == 'macOS'
-      run: sudo mv /Library/Developer/CommandLineTools/usr/include/ffi{,.backup}
+    - uses: actions/checkout@v3
     - uses: swift-actions/setup-swift@v1
       with:
         swift-version: ${{ matrix.swift }}
@@ -28,6 +22,12 @@ jobs:
     - name: Install system dependencies (macOS)
       if: runner.os == 'macOS'
       run: brew install cairo freetype2
+      # Workaround for FFI modulemap redefinition error, see
+      # - https://github.com/orgs/Homebrew/discussions/4025
+      # - https://github.com/tauri-apps/tauri/issues/1150#issuecomment-768310979
+    - name: Remove duplicate FFI headers (macOS)
+      if: runner.os == 'macOS'
+      run: sudo mv /Library/Developer/CommandLineTools/usr/include/ffi{,.backup}
     - name: Build
       run: swift build
     - name: Test
