@@ -1,4 +1,5 @@
 Cairo.xcodeproj
 .build
 *.swp
+.DS_Store
 Packages
