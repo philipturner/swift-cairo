@@ -28,7 +28,7 @@ let package = Package(
             dependencies: []),
         .target(
             name: "SCCFreeType",
-            dependencies: [])
+            dependencies: []),
         .target(
             name: "Cairo",
             dependencies: [
