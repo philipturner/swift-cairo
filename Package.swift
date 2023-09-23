@@ -21,6 +21,15 @@ let package = Package(
     ],
     targets: [
         .target(
+            name: "SCCCairo",
+            dependencies: []),
+        .target(
+            name: "SCCFontConfig",
+            dependencies: []),
+        .target(
+            name: "SCCFreeType",
+            dependencies: [])
+        .target(
             name: "Cairo",
             dependencies: [
                 "SCCCairo",
@@ -34,15 +43,6 @@ let package = Package(
                 "Cairo"
             ]
         ),
-        .target(
-            name: "SCCCairo",
-            dependencies: []),
-        .target(
-            name: "SCCFontConfig",
-            dependencies: []),
-        .target(
-            name: "SCCFreeType",
-            dependencies: [])
-    ],
-    swiftLanguageVersions: [.v5]
+
+    ]
 )
