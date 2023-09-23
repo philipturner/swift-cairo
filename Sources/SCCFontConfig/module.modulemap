@@ -1,5 +1,4 @@
-module SCCFontConfig [system] {
+module SCCFontConfig {
     header "shim.h"
-    link "fontconfig"
     export *
 }
