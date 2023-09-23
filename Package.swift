@@ -28,10 +28,10 @@ let package = Package(
         .target(
             name: "SCCCairo",
             dependencies: []),
-        .systemLibrary(
+        .target(
             name: "SCCFontConfig",
             dependencies: []),
-        .systemLibrary(
+        .target(
             name: "SCCFreeType",
             dependencies: [])
     ],
