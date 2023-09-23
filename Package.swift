@@ -25,27 +25,15 @@ let package = Package(
                 "Cairo"
             ]
         ),
-        .systemLibrary(
+        .target(
             name: "SCCCairo",
-            pkgConfig: "cairo",
-            providers: [
-                .brew(["cairo"]),
-                .apt(["libcairo2-dev"])
-            ]),
+            dependencies: []),
         .systemLibrary(
             name: "SCCFontConfig",
-            pkgConfig: "fontconfig",
-            providers: [
-                .brew(["fontconfig"]),
-                .apt(["libfontconfig-dev"])
-            ]),
+            dependencies: []),
         .systemLibrary(
             name: "SCCFreeType",
-            pkgConfig: "freetype2",
-            providers: [
-                .brew(["freetype2"]),
-                .apt(["libfreetype6-dev"])
-            ])
+            dependencies: [])
     ],
     swiftLanguageVersions: [.v5]
 )
