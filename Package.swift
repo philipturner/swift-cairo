@@ -9,6 +9,15 @@ let package = Package(
         .library(
             name: "Cairo",
             targets: ["Cairo"]),
+        .library(
+            name: "SCCCairo",
+            targets: ["SCCCairo"]),
+        .library(
+            name: "SCCFontConfig",
+            targets: ["SCCFontConfig"]),
+        .library(
+            name: "SCCFreeType",
+            targets: ["SCCFreeType"]),
     ],
     targets: [
         .target(
